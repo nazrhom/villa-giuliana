@@ -127,7 +127,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../images/aerial%20background.JPG') center/cover no-repeat;
+  background: url('../images/aerial-background.webp') center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -295,7 +295,7 @@ a:hover {
 .contact-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/flower%20for%20contact%20page.JPG') center/cover no-repeat;
+  background: url('../images/flower-for-contact-page.webp') center/cover no-repeat;
   opacity: 0.12;
 }
 
