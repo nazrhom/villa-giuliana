@@ -127,10 +127,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* TODO: replace with actual background image */
-  background: linear-gradient(135deg, var(--color-sea) 0%, var(--color-sea-dark) 50%, var(--color-sand) 100%);
-  background-size: cover;
-  background-position: center;
+  background: url('../images/aerial%20background.JPG') center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -210,24 +207,55 @@ a:hover {
   margin: 0 auto;
 }
 
-.slide-placeholder {
+.gallery-carousel img {
+  width: 100%;
   aspect-ratio: 16 / 10;
-  background: linear-gradient(145deg, var(--color-sand-light) 0%, #e8ddd0 100%);
+  object-fit: cover;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: var(--color-text-light);
 }
 
 .gallery-carousel .swiper-button-prev,
 .gallery-carousel .swiper-button-next {
-  color: var(--color-sea);
+  color: var(--color-white);
+  background: rgba(58, 58, 58, 0.45);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s;
+}
+
+.gallery-carousel .swiper-button-prev:hover,
+.gallery-carousel .swiper-button-next:hover {
+  background: rgba(58, 58, 58, 0.7);
+}
+
+.gallery-carousel .swiper-button-prev::after,
+.gallery-carousel .swiper-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .gallery-carousel .swiper-pagination-bullet-active {
   background: var(--color-sea);
+}
+
+/* ===== Property Description ===== */
+.property-description {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.property-description p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.property-description p:last-child {
+  margin-bottom: 0;
 }
 
 /* ===== Property Grid ===== */
@@ -258,8 +286,24 @@ a:hover {
 }
 
 /* ===== Contact ===== */
+.contact-section {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../images/flower%20for%20contact%20page.JPG') center/cover no-repeat;
+  opacity: 0.12;
+}
+
 .contact-container {
+  position: relative;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-intro {
@@ -308,6 +352,50 @@ a:hover {
   color: var(--color-sea);
 }
 
+/* ===== Booking Links ===== */
+.booking-links {
+  margin-top: 3rem;
+}
+
+.booking-links h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--color-text-light);
+  margin-bottom: 1.2rem;
+}
+
+.booking-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-booking {
+  padding: 0.8rem 2.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn-airbnb {
+  background: #FF5A5F;
+}
+
+.btn-airbnb:hover {
+  background: #e04950;
+  color: var(--color-white);
+}
+
+.btn-bookingcom {
+  background: #003580;
+}
+
+.btn-bookingcom:hover {
+  background: #00264d;
+  color: var(--color-white);
+}
+
 /* ===== Footer ===== */
 .footer {
   text-align: center;
@@ -315,6 +403,12 @@ a:hover {
   background: var(--color-text);
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.85rem;
+}
+
+.footer-codes {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
 }
 
 /* ===== Mobile ===== */
