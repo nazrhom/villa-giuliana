@@ -328,7 +328,7 @@ a:hover {
   position: absolute;
   inset: 0;
   background: url('../images/flower-for-contact-page.webp') center/cover no-repeat;
-  opacity: 0.12;
+  opacity: 0.40;
 }
 
 .contact-container {
