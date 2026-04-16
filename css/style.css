@@ -80,6 +80,7 @@ a:hover {
   display: flex;
   list-style: none;
   gap: 2rem;
+  margin-left: auto;
 }
 
 .nav-menu a {
@@ -94,6 +95,37 @@ a:hover {
 
 .nav-menu a:hover {
   color: var(--color-sand);
+}
+
+/* ===== Language Toggle ===== */
+.lang-toggle {
+  background: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-white);
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav.scrolled .lang-toggle {
+  color: var(--color-text);
+  border-color: rgba(58, 58, 58, 0.3);
+}
+
+.nav.scrolled .lang-toggle:hover {
+  background: rgba(58, 58, 58, 0.08);
 }
 
 .nav-toggle {
@@ -127,7 +159,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../images/aerial%20background.JPG') center/cover no-repeat;
+  background: url('../images/aerial-background.webp') center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -295,8 +327,8 @@ a:hover {
 .contact-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/flower%20for%20contact%20page.JPG') center/cover no-repeat;
-  opacity: 0.12;
+  background: url('../images/flower-for-contact-page.webp') center/cover no-repeat;
+  opacity: 0.40;
 }
 
 .contact-container {
@@ -413,6 +445,11 @@ a:hover {
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
+  .lang-toggle {
+    margin-left: auto;
+    margin-right: 0.75rem;
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -443,6 +480,10 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+  }
+
+  .hero {
+    background-position: 65% center;
   }
 
   .property-grid {
